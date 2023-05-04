@@ -202,7 +202,6 @@ body {
       display: flex;
       align-items: center;
       margin-right: 15px;
-      width: 10%;
 
       img {
         width: 80px;
@@ -214,7 +213,6 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 40%;
 
       h3 {
         font-weight: bold;
@@ -233,7 +231,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 13%;
 
       &-minus {
         svg {
@@ -245,6 +242,8 @@ body {
 
       b {
         font-size: 22px;
+        width: 45px;
+        text-align: center;
       }
     }
 
@@ -252,7 +251,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 33%;
 
       b {
         font-weight: bold;
@@ -265,7 +263,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 4%;
 
       .button {
         border-color: darken($color: $gray-line, $amount: 10);
@@ -436,4 +433,74 @@ body {
 .button--disabled {
   cursor: not-allowed;
   opacity: 0.5; /* Можно использовать другое значение прозрачности, если нужно */
+}
+
+.cart__first-block {
+  display: flex;
+  width: 60%;
+}
+
+.cart__second-block {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+@media (max-width: 940px) {
+  .cart__item {
+    flex-direction: column;
+  }
+
+  .cart__first-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cart__second-block {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+
+  .container--cart {
+    margin: 10px auto;
+  }
+
+  .cart__top {
+    flex-direction: column;
+  }
+
+  .cart .content__title {
+    margin-bottom: 20px;
+  }
+
+  .cart--empty {
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .cart__bottom-details {
+    flex-direction: column;
+  }
+
+  .cart__bottom-details span:first-child {
+    margin-bottom: 20px;
+  }
+
+  .cart__bottom-details span {
+    text-align: center;
+  }
+
+  .cart__bottom-buttons {
+    flex-direction: column;
+  }
+
+  .cart__bottom-buttons button {
+    margin: 0 auto;
+  }
+  .cart__bottom-buttons button:first-child {
+    margin-bottom: 20px;
+  }
 }
