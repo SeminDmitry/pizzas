@@ -126,9 +126,9 @@ const FilledCart = () => {
                 <Link to="/">Вернуться назад</Link>
               </span>
             </button>
-            <div className="button pay-btn">
+            <button className="button pay-btn">
               <span>Оплатить сейчас</span>
-            </div>
+            </button>
           </div>
         </div>
       </div>
